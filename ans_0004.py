@@ -2,7 +2,7 @@ import re
 
 if __name__ == '__main__':
 	wordsCount = {}
-	f = open('0004.text', 'r')
+	f = open('0004/0004.text', 'r')
 	for line in f:
 		line = line.replace('\n', '')
 		print(line)
