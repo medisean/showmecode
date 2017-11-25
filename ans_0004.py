@@ -5,7 +5,7 @@ if __name__ == '__main__':
 	f = open('0004/0004.text', 'r')
 	for line in f:
 		line = line.replace('\n', '')
-		print(line)
+		# print(line)
 		# words = line.split(' ')
 		words = re.findall('[a-zA-Z0-9]+',line)
 
