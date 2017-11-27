@@ -71,7 +71,7 @@ def get_file_content(filePath):
 
 if __name__ == "__main__":
     record_wave()
-    res = aipSpeech.asr(get_file_content("output.wav"), 'wav', 8000, { 'lan': 'en',})
+    res = aipSpeech.asr(get_file_content("output.wav"), 'wav', 8000, { 'lan': 'zh',})
     while res['err_no'] != 0:
         print(res)
         print("Please speak again")
