@@ -12,7 +12,7 @@ def read(filename):
 
 def writeToXLS(lines):
     book = xlwt.Workbook()
-    sheet = book.add_sheet("Sheet1")
+    sheet = book.add_sheet("city")
 
     for line in lines:
         sheet.write(int(line)-1, 0, line)
