@@ -11,17 +11,13 @@ def read(filename):
     return data
 
 def writeToExcel(lines):
-    titles = ['学号', '姓名', '语文成绩', '数学成绩', '英语成绩']
     book = xlwt.Workbook()
     sheet = book.add_sheet("Sheet1")
 
-    for i in range(len(titles)):
-        sheet.write(0, i, titles[i])
-
     for line in lines:
-        sheet.write(int(line), 0, line)
+        sheet.write(int(line)-1, 0, line)
         for i in range(len(lines[line])):
-            sheet.write(int(line), i+1, lines[line][i])
+            sheet.write(int(line)-1, i+1, lines[line][i])
     book.save('0014/students.xls')
 
 if __name__ == '__main__':
