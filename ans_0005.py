@@ -1,10 +1,9 @@
 import os
 from PIL import Image
 
-maxWidth = 640
-maxHeight = 1136
 
-def resizeImage(fileName):
+
+def resizeImage(fileName, maxWidth, maxHeight):
 	img = Image.open(fileName)
 	width = img.width
 	height = img.height
@@ -27,8 +26,10 @@ def resizeImage(fileName):
 
 if __name__ == '__main__':
 	path = '0005'
+	iphone5Width = 640
+	iphon5Height = 1136
 	for root, dirs, files in os.walk(path):
 		for file in files:
 			if file.endswith('jpg') or file.endswith('jpeg') or file.endswith('gif') or file.endswith('png') or file.endswith('bmp'):
 				filepath = path + '/' + file
-				resizeImage(filepath)
+				resizeImage(filepath, iphone5Width, iphon5Height)
